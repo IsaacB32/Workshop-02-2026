@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -7,6 +8,7 @@ namespace Polishing.Demo
     public class BarInterpolation : MonoBehaviour
     {
         [SerializeField] private Image healthBarFill;
+        [SerializeField] private TextMeshProUGUI barText;
         [SerializeField] private float lerpSpeed = 1.0f;
         [SerializeField] private float healthChangeAmount = 25.0f;
 
@@ -41,6 +43,7 @@ namespace Polishing.Demo
         {
             currentHealth = Mathf.Clamp(value, 0, maxHealth);
             targetFillValue = currentHealth/maxHealth;
+            barText.text = $"{currentHealth} / {maxHealth}";
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Polishing
         public float velocity = 0.0f;
         public float goalPosition = 0.0f;
 
-        public Spring(float stiffness, float damping, float goalPosition)
+        public Spring(float stiffness, float damping, float goalPosition=0.0f)
         {
             this.stiffness = stiffness;
             this.damping = damping;
