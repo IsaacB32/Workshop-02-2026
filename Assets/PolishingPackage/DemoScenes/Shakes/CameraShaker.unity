@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
+  - component: {fileID: 330585548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -256,6 +257,36 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &330585548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3ae07d0cac18a4e9d209a5d972d292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Polishing.Shakes.ImpulseShaker
+  frequency: 25
+  positionShakeSettings:
+    amplitude: 0.54
+    randomizeX: 1
+    randomizeY: 1
+    randomizeZ: 1
+  rotationShakeSettings:
+    amplitude: 5.33
+    randomizeX: 1
+    randomizeY: 1
+    randomizeZ: 1
+  scaleShakeSettings:
+    amplitude: 0
+    randomizeX: 0
+    randomizeY: 0
+    randomizeZ: 0
+  impulseFalloffSpeed: 0.8
+  impulseExponent: 4
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,9 +423,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 526813447}
-  - component: {fileID: 526813448}
   m_Layer: 0
-  m_Name: Spring
+  m_Name: Shaker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -416,25 +446,6 @@ Transform:
   - {fileID: 1115669983}
   m_Father: {fileID: 2061966282}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &526813448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526813446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9424cfa8a023704b924b846db3cb146, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TransformSpring
-  springStiffness: 100
-  springDamping: 0.3
-  goalPosition: 0
-  nudgePower: 5
-  positionMapping: {x: 0, y: 0, z: 0}
-  rotationMapping: {x: 0, y: 0, z: 0}
-  scaleMapping: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,7 +618,7 @@ Transform:
   m_GameObject: {fileID: 2061966281}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.18}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
